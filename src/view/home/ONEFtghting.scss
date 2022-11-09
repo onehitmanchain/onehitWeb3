@@ -1,0 +1,134 @@
+.Ftghting_bg {
+    width: 1440px;
+    height: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .img_bg {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .img_monster {
+        position:absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 596px;
+        height: auto;
+        z-index: 10;
+
+    }
+
+    .head {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        .head_bg {
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+
+        .logo {
+            width: 235px;
+            height: auto;
+            z-index: 1;
+        }
+
+        .layout {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            margin-right: 31px;
+            align-items: center;
+            margin-left: 10px;
+
+            .btn_layout {
+                width: auto;
+                height: auto;
+                position: relative;
+                cursor: pointer;
+
+                .txt {
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    margin: auto;
+                    position: absolute;
+                    width: auto;
+                    height: auto;
+                    font-size: 24px;
+                    font-family: Teko-Bold, Teko;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                    line-height: 64px;
+                    text-align: center;
+                }
+
+                .img {
+                    width: 200px;
+                    height: auto;
+                }
+
+            }
+
+            .wallet {
+                position: relative;
+                width: auto;
+                height: auto;
+                cursor: pointer;
+
+                .wallet_bg {
+                    width: 228px;
+                    height: auto;
+                }
+
+                .wallet_layout {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    position: absolute;
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .txt {
+                        margin-top: 4px;
+                        margin-left: 4px;
+                        font-size: 20px;
+                        font-family: Teko-Regular, Teko;
+                        font-weight: 400;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+
+}
