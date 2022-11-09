@@ -14,7 +14,7 @@
     }
 
     .img_monster {
-        position:absolute;
+        position: absolute;
         left: 0;
         right: 0;
         top: 0;
@@ -56,8 +56,8 @@
             display: flex;
             flex-direction: row;
             margin-right: 31px;
-            align-items: center;
             margin-left: 10px;
+
 
             .btn_layout {
                 width: auto;
@@ -78,7 +78,7 @@
                     font-family: Teko-Bold, Teko;
                     font-weight: bold;
                     color: #FFFFFF;
-                    line-height: 64px;
+                    line-height: 74px;
                     text-align: center;
                 }
 
@@ -94,6 +94,7 @@
                 width: auto;
                 height: auto;
                 cursor: pointer;
+                margin-top: 20px;
 
                 .wallet_bg {
                     width: 228px;
@@ -102,9 +103,7 @@
 
                 .wallet_layout {
                     top: 0;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
+                    left: 12px;
                     position: absolute;
                     width: auto;
                     height: auto;
@@ -120,7 +119,7 @@
 
                     .txt {
                         margin-top: 4px;
-                        margin-left: 4px;
+                        margin-left: 10px;
                         font-size: 20px;
                         font-family: Teko-Regular, Teko;
                         font-weight: 400;
@@ -129,6 +128,170 @@
                 }
             }
         }
+    }
+
+    .left {
+        position: absolute;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        top: 127px;
+        left: 28px;
+
+        .info_layout {
+            width: 362px;
+            height: 90px;
+            background-image: url(../../asset/image/ftghting/img_ftghting_info_bg.png);
+            display: flex;
+            flex-direction: row;
+
+            .info_head {
+                width: 90px;
+                height: 90px;
+                padding: 5px;
+                background: #FFFFFF;
+                border-radius: 30px;
+                box-sizing: border-box;
+            }
+
+            .info_content {
+                margin-left: 14px;
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+
+                .name {
+                    margin-top: 10px;
+                    font-size: 32px;
+                    font-family: Teko-Bold, Teko;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                    text-align: left;
+                }
+
+                .address {
+                    font-size: 18px;
+                    font-family: Teko-Bold, Teko;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        .assets_layout {
+            margin-top: 41px;
+            position: relative;
+            width: 363px;
+            height: 95px;
+
+            .img {
+                left: 0px;
+                position: absolute;
+                width: 363px;
+                height: 95px;
+            }
+
+            .txt {
+                left: 20px;
+                top: 20px;
+                position: absolute;
+                font-size: 24px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #000000;
+                line-height: 34px;
+            }
+
+            .title {
+                left: 20px;
+                top: -26px;
+                position: absolute;
+                font-size: 38px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #FFFFFF;
+                line-height: 54px;
+
+            }
+
+            .increase {
+                position: absolute;
+                top: 19px;
+                right: 19px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .monster_info {
+            margin-top: 41px;
+            position: relative;
+            width: 317px;
+            height: 84px;
+            display: flex;
+            flex-direction: column;
+
+            .img {
+                left: 0px;
+                position: absolute;
+                width: 317px;
+                height: 84px;
+            }
+
+            .title {
+                margin-left: 20px;
+                margin-top: 10px;
+                font-size: 18px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #000000;
+                z-index: 1;
+                text-align: left;
+            }
+
+            .content {
+                margin-top: -10px;
+                margin-left: 20px;
+                font-size: 30px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #000000;
+                z-index: 1;
+                text-align: left;
+            }
+
+            .monster_icon {
+                position: absolute;
+                right: 10px;
+                bottom: -17px;
+                width: 76px;
+                height: 76px;
+            }
+
+        }
+
+        .desc {
+            margin-top: 33px;
+            margin-left: 20px;
+            width: 253px;
+            font-size: 18px;
+            font-family: Teko-Medium, Teko;
+            font-weight: 500;
+            color: #000000;
+            line-height: 22px;
+            text-align: left;
+            
+        }
+    }
+
+    .bttom_bg {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        position: absolute;
     }
 
 }

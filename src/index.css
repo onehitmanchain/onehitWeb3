@@ -20,9 +20,9 @@ code {
 }
 @font-face {
   font-family: 'Teko-Medium';
-  src: url(./asset/ttf/Teko-Bold.ttf);
+  src: url(./asset/ttf/Teko-Medium.ttf);
 }
 @font-face {
   font-family: 'Teko-Regular';
-  src: url(./asset/ttf/Teko-Bold.ttf);
+  src: url(./asset/ttf/Teko-Regular.ttf);
 }
