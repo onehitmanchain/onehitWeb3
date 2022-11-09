@@ -4,13 +4,20 @@
     position: relative;
     left: 0;
     right: 0;
+    bottom: 0;
     margin: auto;
+    padding-bottom: 0;
 
     .img_bg {
-        left: 0;
+        display: block;
+        left: 0px;
         top: 0;
+        padding: 0;
+        margin: 0;
         width: 100%;
         height: auto;
+        object-fit: contain;
+
     }
 
     .layout_moster {
@@ -99,8 +106,8 @@
             }
 
             .txt_reword_coint {
-                left:50px;
-                top:25px;
+                left: 50px;
+                top: 25px;
                 position: absolute;
                 width: 204px;
                 height: 86px;
@@ -110,8 +117,49 @@
                 color: #5FFF00;
                 text-stroke: 5px rgb(0, 0, 0);
                 -webkit-text-stroke: 5px rgb(0, 0, 0);
-                text-shadow:  5px 5px 5px #000, 5px 0px 5px #000;
+                text-shadow: 5px 5px 5px #000, 5px 0px 5px #000;
                 line-height: 86px;
+            }
+        }
+
+        .number_layout {
+            top: -51px;
+            right: 0;
+            position: absolute;
+            width: 102px;
+            height: 104px;
+            display: flex;
+            flex-direction: column;
+
+
+            .img {
+                left: 0;
+                top: 0;
+                position: absolute;
+                width: 102px;
+                height: 104px;
+            }
+
+            .title_number {
+                top: 10px;
+                position: relative;
+                font-size: 18px;
+                font-family: Teko-Regular, Teko;
+                font-weight: 400;
+                color: #FFFFFF;
+                line-height: 34px;
+
+            }
+
+            .txt_number {
+                top: 5px;
+                position: relative;
+                font-size: 37px;
+                font-family: Teko-Regular, Teko;
+                font-weight: 400;
+                color: #FFFFFF;
+                line-height: 34px;
+
             }
         }
     }
@@ -155,6 +203,9 @@
                 height: auto;
                 position: relative;
                 cursor: pointer;
+                &:hover{
+                    transform: scale(1.1);
+                }
 
                 .txt {
                     left: 0;
@@ -376,12 +427,138 @@
         }
     }
 
+    .bottom_group_btn {
+        position: absolute;
+        bottom: 64px;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        z-index: 10;
+
+        .btn_layout {
+            position: relative;
+            width: 172px;
+            height: 214px;
+            cursor: pointer;
+
+            .img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 172px;
+                height: 214px;
+                z-index: 1;
+            }
+
+            .title {
+                position: absolute;
+                bottom: -36px;
+                left: -10px;
+                right:0;
+                margin: auto;
+                font-size: 50px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #FFFFFF;
+                line-height: 72px;
+
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+
+        }
+
+        .btn_onehit {
+            cursor: pointer;
+            margin-top: 22px;
+            margin-left: 64px;
+            position: relative;
+            width: 254px;
+            height: 151px;
+
+            .img {
+                left: 0;
+                top: 0;
+                position: absolute;
+                width: 254px;
+                height: 151px;
+            }
+
+            .txt {
+                left: 38px;
+                top: 30px;
+                position: absolute;
+                font-size: 60px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #000000;
+                line-height: 86px;
+                -webkit-transform: rotateZ(-4deg);
+                transform: rotateZ(-4deg);
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        .btn_upgrade {
+            cursor: pointer;
+            margin-top: 35px;
+            margin-left: 13px;
+            position: relative;
+            width: 160px;
+            height: 97px;
+
+            .img {
+                left: 0;
+                top: 0;
+                position: absolute;
+                width: 160px;
+                height: 97px;
+            }
+
+            .txt {
+                left: 33px;
+                top: 25px;
+                position: absolute;
+                font-size: 28px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #000000;
+                line-height: 40px;
+                -webkit-transform: rotateZ(-4deg);
+                transform: rotateZ(-4deg);
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        .left_37 {
+            margin-left: 37px;
+        }
+
+    }
+
     .bttom_bg {
         left: 0;
         bottom: 0;
         width: 100%;
         height: auto;
         position: absolute;
+    }
+
+    .weapons {
+        position: absolute;
+        bottom: 0;
+        right: 160px;
+        width: 358px;
+        height: auto;
+        z-index: 10;
     }
 
 }

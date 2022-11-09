@@ -17,6 +17,13 @@ import icon_ftghting_info_icon from "../../asset/image/ftghting/icon_ftghting_in
 import img_ftghting_monster_sum_bg from "../../asset/image/ftghting/img_ftghting_monster_sum_bg.png"
 import img_ftghting_monster_sum_hot from "../../asset/image/ftghting/img_ftghting_monster_sum_hot.png"
 import img_ftghting_monster_sum_getting from "../../asset/image/ftghting/img_ftghting_monster_sum_getting.png"
+import icon_ftghting_number_bg from "../../asset/image/ftghting/icon_ftghting_number_bg.png"
+import img_ftghting_weapons from "../../asset/image/ftghting/img_ftghting_weapons.png"
+import btn_ftghting_arms from "../../asset/image/ftghting/btn_ftghting_arms.png"
+import btn_ftghting_onehit from "../../asset/image/ftghting/btn_ftghting_onehit.png"
+import btn_ftghting_pet from "../../asset/image/ftghting/btn_ftghting_pet.png"
+import btn_ftghting_skill from "../../asset/image/ftghting/btn_ftghting_skill.png"
+import btn_ftghting_upgrade from "../../asset/image/ftghting/btn_ftghting_upgrade.png"
 
 function ONEFtghting() {
   return (
@@ -56,6 +63,13 @@ function ONEFtghting() {
           </div>
           <span className='txt_reword_coint'>+ 0.9362</span>
         </div>
+        <div className='number_layout'>
+          <img className='img' src={icon_ftghting_number_bg}>
+
+          </img>
+          <span className="title_number">number</span>
+          <span className="txt_number">126</span>
+        </div>
       </div>
 
       <div className='left'>
@@ -81,6 +95,29 @@ function ONEFtghting() {
         <span className="desc">Villagers with stone knives can enter the stone statue secret realm and break the stone statue. After the stone statue is broken, the villagers can obtain a thing called stone spirit. Villagers can exchange Shi Ling for OHT, the hard currency of Tianwu Continent.</span>
       </div>
       <img className='bttom_bg' src={img_ftghting_bottom}></img>
+      <img className='weapons' src={img_ftghting_weapons}></img>
+      <div className='bottom_group_btn'>
+        <div className='btn_layout'>
+          <img className='img' src={btn_ftghting_skill}></img>
+          <span className='title'>Skill</span>
+        </div>
+        <div className='btn_layout left_37'>
+          <img className='img' src={btn_ftghting_arms}></img>
+          <span className='title'>ARMS</span>
+        </div>
+        <div className='btn_layout left_37'>
+          <img className='img' src={btn_ftghting_pet}></img>
+          <span className='title'>PET</span>
+        </div>
+        <div className='btn_onehit'>
+          <img className='img' src={btn_ftghting_onehit}></img>
+          <span className='txt'>ONEHIT</span>
+        </div>
+        <div className='btn_upgrade'>
+          <img className='img' src={btn_ftghting_upgrade}></img>
+          <span className='txt'>upgrade</span>
+        </div>
+      </div>
     </div>
   );
 }
