@@ -14,8 +14,9 @@ import img_ftghting_info_head from "../../asset/image/ftghting/img_ftghting_info
 import img_ftghting_info_assets_bg from "../../asset/image/ftghting/img_ftghting_info_assets_bg.png"
 import img_ftghting_increase from "../../asset/image/ftghting/img_ftghting_increase.png"
 import icon_ftghting_info_icon from "../../asset/image/ftghting/icon_ftghting_info_icon.png"
-
-
+import img_ftghting_monster_sum_bg from "../../asset/image/ftghting/img_ftghting_monster_sum_bg.png"
+import img_ftghting_monster_sum_hot from "../../asset/image/ftghting/img_ftghting_monster_sum_hot.png"
+import img_ftghting_monster_sum_getting from "../../asset/image/ftghting/img_ftghting_monster_sum_getting.png"
 
 function ONEFtghting() {
   return (
@@ -43,7 +44,20 @@ function ONEFtghting() {
           </div>
         </div>
       </div>
-      <img className='img_monster' src={img_ftghting_monster}></img>
+      <div className='layout_moster'>
+        <img className='img_monster' src={img_ftghting_monster}></img>
+        <div className='sum_layout'>
+          <img className='img' src={img_ftghting_monster_sum_bg}></img>
+          <img className='img_getting' src={img_ftghting_monster_sum_getting}></img>
+          <span className='txt_getting'>Congratulations on getting</span>
+          <div className='hot_layout'>
+            <img className='hot' src={img_ftghting_monster_sum_hot}></img>
+            <span className='txt_hot'>OHT</span>
+          </div>
+          <span className='txt_reword_coint'>+ 0.9362</span>
+        </div>
+      </div>
+
       <div className='left'>
         <div className='info_layout'>
           <img className='info_head' src={img_ftghting_info_head}></img>

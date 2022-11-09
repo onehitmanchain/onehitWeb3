@@ -13,7 +13,7 @@
         height: auto;
     }
 
-    .img_monster {
+    .layout_moster {
         position: absolute;
         left: 0;
         right: 0;
@@ -21,10 +21,101 @@
         bottom: 0;
         margin: auto;
         width: 596px;
-        height: auto;
+        height: 634px;
         z-index: 10;
 
+        .img_monster {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 596px;
+            height: 634px;
+        }
+
+        .sum_layout {
+            position: absolute;
+            left: 12px;
+            top: 62px;
+            width: 324.82px;
+            height: auto;
+
+            .img {
+                left: 0;
+                top: 0;
+                position: absolute;
+                width: 324.82px;
+                height: 126.72px;
+            }
+
+            .img_getting {
+                left: 9px;
+                top: -3px;
+                position: absolute;
+                width: 212px;
+                height: 31px;
+            }
+
+            .txt_getting {
+                left: 30px;
+                top: 1px;
+                position: absolute;
+                font-size: 16px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #FFFFFF;
+                line-height: 23px;
+                -webkit-transform: rotateZ(-3deg);
+                transform: rotateZ(-3deg);
+            }
+
+            .hot_layout {
+                position: absolute;
+                top: -7px;
+                right: 9px;
+                width: 75px;
+                height: 44px;
+
+                .hot {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 75px;
+                    height: 44px;
+                }
+
+                .txt_hot {
+                    left: 13px;
+                    position: absolute;
+                    font-size: 28px;
+                    font-family: Teko-Bold, Teko;
+                    font-weight: bold;
+                    color: #FFE400;
+                    line-height: 40px;
+                }
+
+            }
+
+            .txt_reword_coint {
+                left:50px;
+                top:25px;
+                position: absolute;
+                width: 204px;
+                height: 86px;
+                font-size: 60px;
+                font-family: Teko-Bold, Teko;
+                font-weight: bold;
+                color: #5FFF00;
+                text-stroke: 5px rgb(0, 0, 0);
+                -webkit-text-stroke: 5px rgb(0, 0, 0);
+                text-shadow:  5px 5px 5px #000, 5px 0px 5px #000;
+                line-height: 86px;
+            }
+        }
     }
+
 
     .head {
         position: absolute;
@@ -269,7 +360,6 @@
                 width: 76px;
                 height: 76px;
             }
-
         }
 
         .desc {
@@ -282,7 +372,7 @@
             color: #000000;
             line-height: 22px;
             text-align: left;
-            
+
         }
     }
 
