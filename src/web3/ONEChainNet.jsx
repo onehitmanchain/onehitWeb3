@@ -2,14 +2,16 @@
 export const ChainId = {
     BSC: 56,
     BSCTEST: 97,
-    MATIC: 137
+    MATIC: 137,
+    MATICTEST: 80001,
   }
 
-  
+
 const SCAN_ADDRESS = {
     [ChainId.BSC]: 'https://bscscan.com',
     [ChainId.BSCTEST]: 'https://testnet.bscscan.com/',
     [ChainId.MATIC]: 'https://polygonscan.com/',
+    [ChainId.MATICTEST]: 'https://polygonscan.com/',
   }
   const networkConf = {
     [ChainId.BSCTEST]: {
@@ -46,6 +48,17 @@ const SCAN_ADDRESS = {
       },
       rpcUrls: ['https://rpc-mainnet.maticvigil.com'],
       blockExplorerUrls: [SCAN_ADDRESS[ChainId.MATIC]],
+    },
+    [ChainId.MATICTEST]: {
+      chainId: '0x13881',
+      chainName: 'MATIC-TEST',
+      nativeCurrency: {
+        name: 'MATIC',
+        symbol: 'MATIC',
+        decimals: 18,
+      },
+      rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
+      blockExplorerUrls: [SCAN_ADDRESS[ChainId.MATICTEST]],
     }
   }
   

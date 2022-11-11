@@ -5,10 +5,11 @@ import { useWeb3React } from '@web3-react/core'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import Web3 from 'web3'
 import { changeNetwork, ChainId } from '../../web3/ONEChainNet'
+import  ONEMint from '../../web3/ONEMint'
 
 import './ONEFtghting.scss';
 
-import OHSWord from '../../asset/abi/OHSWord.json'
+
 import img_ftghting_bg from "../../asset/image/ftghting/img_ftghting_bg.png"
 import img_head_bg from "../../asset/image/ftghting/img_head_bg.png"
 import icon_logo from "../../asset/image/icon/icon_logo.png"
@@ -35,7 +36,7 @@ import btn_ftghting_upgrade from "../../asset/image/ftghting/btn_ftghting_upgrad
 
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [97],
+  supportedChainIds: [ChainId.MATICTEST],
 })
 
 
@@ -77,56 +78,19 @@ function ONEFtghting() {
     window.ethereum.on('message', message => {
       console.log('message', message)
     })
-
   }
+
   async function getTokenOwner() {
-    const _web3 = library;
-    let contract = new _web3.eth.Contract(
-      OHSWord.abi,
-      "0xe04bDe72B86E7a2c02E612be258FA1403a71Db1f"
-    );
-    try {
-      contract.methods.tokenOfOwners(account).call({
-        from: account,
-        // value: _web3.utils.toWei(price, "ether"),
-      }, function (error, result) {
-        console.log(result, error, "resut");
-
-      }).on('transactionHash', (hash, message) => {
-        console.log(message, hash);
-      }).catch(error => {
-        console.log(error, "error");
-      });
-    } catch (err) {
-      console.log(err, "error");
-    }
+    ONEMint.getTokenOwner(library,account)
   }
-  async function mint() {
-    const _web3 = library;
-    var contract = new _web3.eth.Contract(
-      OHSWord.abi,
-      "0xe04bDe72B86E7a2c02E612be258FA1403a71Db1f"
-    );
-    try {
-      contract.methods.mint(account).send({
-        from: account,
-        // value: _web3.utils.toWei(price, "ether"),
-      }, function (error, result) {
-        console.log(result, error, "resut");
 
-      }).on('transactionHash', (hash, message) => {
-        console.log(message, hash);
-      }).catch(error => {
-        console.log(error, "error");
-      });
-    } catch (err) {
-      console.log(err, "error");
-    }
+  const mint = () => {
+    ONEMint.mint(library,account);
   }
 
   async function connectedClick() {
-    if (chainId != 97) {
-      changeNetwork(ChainId.BSCTEST)
+    if (chainId != ChainId.MATICTEST) {
+      changeNetwork(ChainId.MATICTEST)
     }
     await activate(injected).then(res => {
       getTokenOwner();
