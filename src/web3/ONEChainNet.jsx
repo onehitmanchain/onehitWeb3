@@ -74,7 +74,7 @@ const SCAN_ADDRESS = {
             }
           ],
         }).then(() => {
-          setTimeout(reslove, 500)
+          setTimeout(reslove, 1000)
         })
       } else {
         reslove()

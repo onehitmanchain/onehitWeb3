@@ -6,7 +6,6 @@ import Web3 from 'web3'
 import './App.css';
 function getLibrary(provider, connector) {
   const web3 = new Web3(provider);
-  console.log(web3,"web3");
   return web3 // this will vary according to whether you use e.g. ethers or web3.js
 }
 

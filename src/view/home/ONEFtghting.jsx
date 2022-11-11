@@ -5,8 +5,8 @@ import { useWeb3React } from '@web3-react/core'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import Web3 from 'web3'
 import { changeNetwork, ChainId } from '../../web3/ONEChainNet'
-import  ONEMint from '../../web3/ONEMint'
-
+import ONEMint from '../../web3/ONEMint'
+import ONEBattle0 from '../../web3/ONEBattle0'
 import './ONEFtghting.scss';
 
 
@@ -38,10 +38,6 @@ import btn_ftghting_upgrade from "../../asset/image/ftghting/btn_ftghting_upgrad
 export const injected = new InjectedConnector({
   supportedChainIds: [ChainId.MATICTEST],
 })
-
-
-
-
 
 function ONEFtghting() {
 
@@ -76,26 +72,44 @@ function ONEFtghting() {
     })
 
     window.ethereum.on('message', message => {
-      console.log('message', message)
+      // console.log('message', message)
     })
   }
 
-  async function getTokenOwner() {
-    ONEMint.getTokenOwner(library,account)
+  const getTokenOwner = (account) => {
+    console.log(account, "account");
+    ONEMint.getTokenOwner(library, account)
   }
 
   const mint = () => {
-    ONEMint.mint(library,account);
+    ONEMint.mint(library, account);
   }
 
-  async function connectedClick() {
+  const fight = () => {
+    ONEBattle0.playFight(library, account);
+  }
+
+
+  const connectedClick = () => {
+    console.log(chainId);
     if (chainId != ChainId.MATICTEST) {
-      changeNetwork(ChainId.MATICTEST)
+      changeNetwork(ChainId.MATICTEST).then(res => {
+        activateMask();
+      })
+      return;
     }
-    await activate(injected).then(res => {
-      getTokenOwner();
-    }).catch(error => {
-    })
+    activateMask();
+  }
+
+  const activateMask = async () => {
+    try {
+      await activate(injected, undefined,true).then(res => {
+        getTokenOwner(account);
+      }).catch(error => {
+      })
+    } catch (ex) {
+      console.log(ex, "ex");
+    }
   }
 
   const getChainLows = () => {
@@ -187,7 +201,7 @@ function ONEFtghting() {
           <img className='img' src={btn_ftghting_pet} alt=""></img>
           <span className='title'>PET</span>
         </div>
-        <div className='btn_onehit'>
+        <div className='btn_onehit' onClick={fight}>
           <img className='img' src={btn_ftghting_onehit} alt=""></img>
           <span className='txt'>ONEHIT</span>
         </div>
